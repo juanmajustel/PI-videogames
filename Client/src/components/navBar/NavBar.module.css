@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Prototype";
+  src: url("../../assets/Prototype.ttf") format("truetype");
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 5rem;
+  margin: auto;
+}
+
+.navbar .link {
+  display: flex;
+  align-items: stretch;
+  height: 70px;
+}
+
+.navbar .newgame {
+  font-size: 30px;
+  margin: 25px 120px 0px 0px;
+  font-family: "Prototype";
+  color: rgb(7, 1, 12);
+  text-transform: uppercase;
+}
+
+.select {
+  margin-left: 30px;
+  padding: 10px 30px 10px 10px;
+  height: 45px;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-size: 25px;
+  background-color: transparent;
+  color: rgb(255, 252, 252);
+  font-family: "Prototype";
+}
+
+.select:focus {
+  border-color: #00ccff;
+  box-shadow: 0 0 8px 0 #00ccff;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 40px;
+  width: 130px;
+  color: rgb(10, 10, 0);
+  text-decoration: none;
+  border: 2px solid black;
+  background-color: transparent;
+  padding: 1px 1px 1px 1px;
+  font-size: 17px;
+  border-radius: 15px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  font-family: "Prototype";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  color: #00ccff;
+  background-color: var(--bg-color);
+  border: 2px solid #00ccff;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 1600px) {
+  .select {
+    padding: 0px 0px 0px 0px;
+    font-size: 16px;
+    margin-left: 0.3rem;
+  }
+  .btnLightDark {
+    margin-left: 0.5rem;
+  }
+  .navbar .title {
+    font-size: 40px;
+  }
+  .navbar .optionBar {
+    font-size: 20px;
+    margin: 20px 10px 10px 10px;
+    /* white-space: nowrap;
+  	    overflow: hidden;
+  	    text-overflow: ellipsis; */
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar .title {
+    font-size: 1px;
+    visibility: hidden;
+  }
+}
