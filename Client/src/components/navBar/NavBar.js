@@ -7,7 +7,7 @@ import {
   filterVideoGames,
   orderVideoGames,
   origenFilterVideoGames,
-} from "../../actions";
+} from "../../redux/actions/index";
 import SearchBar from "../searchBar/SearchBar";
 import styles from "./NavBar.module.css";
 

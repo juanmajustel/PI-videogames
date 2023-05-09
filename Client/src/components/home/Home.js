@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getGenres, getVideoGames } from "../../actions";
+import { getGenres, getVideoGames } from "../../redux/actions/index";
 import Card from "../card/Card";
 import Spinner from "../spinner/Spinner";
 import Paginated from "../paginated/Paginated";
@@ -8,6 +8,7 @@ import NotFound from "../notFound/NotFound";
 
 import "./Home.css";
 import NavBar from "../navBar/NavBar";
+import Footer from "../footer/footer";
 
 export default function Home() {
   const dispatch = useDispatch(); // Importa useDispatch hook desde Redux para enviar acciones a la store.
@@ -63,6 +64,7 @@ export default function Home() {
             itemsPorPagina={itemsPorPagina}
           />
         )}
+        <Footer />
       </div>
     );
   }

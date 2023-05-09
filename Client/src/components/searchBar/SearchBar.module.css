@@ -20,27 +20,27 @@
   transition: 0.3s;
   font-size: 20px;
   background-color: transparent;
-  color: rgb(255, 246, 246);
+  color: rgb(9, 9, 9);
   height: 40px;
 }
 
 .inputDecorated:focus {
-  border-color: #00ccff;
-  box-shadow: 0 0 8px 0 #00ccff;
+  border-color: #f6f8f8;
+  box-shadow: 0 0 8px 0 #eaedee;
 }
 
 .btn {
+  margin-left: 5px;
   margin-top: 20px;
   height: 40px;
   /* margin: 0px 0px 0px 0px;  */
   width: 50px;
-  color: #00ccff;
+  color: #0f0f0f;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  border: 2px solid var(--text-color);
-  background-color: var(--bg-color);
+  border: 2px transparent;
+  background-color: transparent;
   padding: 1px 1px 1px 1px;
-  font-size: 16px;
+  font-size: 25px;
   border-radius: 15px;
   transition-property: all;
   transition-duration: 0.5s;
@@ -48,8 +48,7 @@
 
 .btn:hover {
   color: #000000;
-  /* background-color: #00ccff; */
-  border: 2px solid #00ccff;
+  border: 2px solid #f1f5f6;
   cursor: pointer;
   transition-property: all;
   transition-duration: 0.5s;

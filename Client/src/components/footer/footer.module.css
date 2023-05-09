@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Prototype";
+  src: url("../../assets/Prototype.ttf") format("truetype");
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Agregamos esta propiedad */
+  height: 7rem;
+  width: 96%;
+  padding: 0.2rem 2%;
+  color: rgb(24, 24, 23);
+  text-align: left;
+  backdrop-filter: blur(4px);
+  margin-top: 5em;
+}
+
+.footer h5 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: "Prototype";
+  color: rgb(8, 8, 8);
+  letter-spacing: 2px;
+}
+.infoLeft {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Prototype";
+  letter-spacing: 1px;
+}
+
+.infoLeft,
+.infoRight {
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+.infoRight {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.infoRight > a {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  background-color: rgb(69, 69, 69);
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.infoRight > a:hover {
+  transform: scale(1.05);
+}
+
+.infoRight > a:active {
+  transform: scale(0.95);
+}
+
+.infoRight img {
+  height: 3.9rem;
+}
