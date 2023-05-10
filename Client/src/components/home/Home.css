@@ -2,8 +2,9 @@ body {
   --bg-color: #111d2b;
   --text-color: #ffffff;
   --card-color: #0f0f0f;
-  background-image: url("../../assets/bkgHome.jpg");
-  background-size: 100%;
+  background: url("../../assets/bkgHome.jpg") top center no-repeat fixed,
+    url("../../assets/bkgDetail.jpg") bottom center no-repeat fixed;
+  background-size: cover;
 }
 
 .cards {

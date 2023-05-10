@@ -46,19 +46,19 @@
 
 @keyframes changeStrokeColor {
   0% {
-    stroke: #ff4e50;
+    stroke: #000000;
   }
   33% {
-    stroke: #fc913a;
+    stroke: #ffffff;
   }
   66% {
-    stroke: #f9d423;
+    stroke: #000000;
   }
   100% {
-    stroke: #dc4eff;
+    stroke: #ffffff;
   }
   70% {
-    stroke: #4ee4ff;
+    stroke: #000000;
   }
 }
 

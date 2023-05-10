@@ -68,7 +68,7 @@ export default function CardDetail(props) {
             </p>
             <div>
               <button className={styles.detailBtnBack} onClick={history.goBack}>
-                Back
+                Home
               </button>
               {detailVideoGame.id.length > 10 && (
                 <button

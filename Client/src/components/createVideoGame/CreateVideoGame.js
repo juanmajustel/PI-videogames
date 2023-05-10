@@ -63,7 +63,7 @@ export default function CreateVideoGame() {
   };
 
   // Función para borrar los errores en los inputs
-  const borrarErrores = () => {
+  const deleteErrors = () => {
     setNameError(false);
     setDescriptionError(false);
     setImageError(false);
@@ -76,7 +76,7 @@ export default function CreateVideoGame() {
   // Función que se ejecuta al enviar el formulario
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    borrarErrores();
+    deleteErrors();
     if (!game.name) return setNameError("enter a name for your game");
     if (!game.description)
       return setDescriptionError("enter a description for your game");
@@ -94,7 +94,7 @@ export default function CreateVideoGame() {
       return setPlatformsError("select one or more platforms");
 
     // Si no hay errores, se borran y se crea el juego
-    borrarErrores();
+    deleteErrors();
     setGame({
       name: "",
       description: "",
@@ -235,7 +235,7 @@ export default function CreateVideoGame() {
               </form>
             </div>
             <button className={styles.btn} onClick={history.goBack}>
-              Cancel
+              Back
             </button>
             <button
               className={styles.btn}

@@ -81,12 +81,17 @@
 
 @media (max-width: 1350px) {
   .detailImg {
-    width: 40%;
+    width: 50%;
   }
 }
 
 @media (max-width: 1150px) {
   .detailImg {
-    width: 30%;
+    width: 40%;
+  }
+}
+@media (max-width: 1366px) {
+  .detailImg {
+    width: 40%;
   }
 }

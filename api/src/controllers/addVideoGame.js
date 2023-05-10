@@ -1,7 +1,5 @@
-// Importamos los modelos Genre y Videogame de nuestra base de datos
 const { Genre, Videogame } = require("../db.js");
 
-// Definimos una función asíncrona llamada "addVideoGame"
 exports.addVideoGame = async (req, res) => {
   // Obtenemos los datos del videojuego a agregar del cuerpo de la solicitud
   const { name, description, released, rating, genres, image, platforms } =
@@ -47,11 +45,9 @@ exports.addVideoGame = async (req, res) => {
       ...gameCreated.dataValues,
       genres: genres.map((g) => g).join(", "),
     };
-
     // Enviamos una respuesta con el objeto "gameCreated" como resultado exitoso
     return res.status(200).json(gameCreated);
   } catch (error) {
-    // Enviamos una respuesta con el error como resultado fallido
     return res.status(404).json(error);
   }
 };
