@@ -31,13 +31,13 @@
 }
 
 @media (max-width: 1700px) {
-  /* .card-img {
-        width: 22vw;
-    } */
+  .card-img {
+    width: 22vw;
+  }
 }
 
 @media (max-width: 1529px) {
-  /* .card-img {
-        width: 20rem;
-    } */
+  .card-img {
+    width: 22rem;
+  }
 }

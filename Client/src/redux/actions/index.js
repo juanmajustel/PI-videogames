@@ -19,107 +19,99 @@ export const DELETE_VIDEOGAME = "DELETE_VIDEOGAME";
 export const FILTER_PLATAFORM = "FILTER_PLATAFORM";
 
 export function getVideoGames() {
-    return function (dispatch) {
-        return axios
-            .get(`/videogames`)
-            .then(({ data }) => {
-                dispatch({ type: GET_VIDEOGAMES, payload: data });
-            });
-    };
+  return function (dispatch) {
+    return axios.get(`/videogames`).then(({ data }) => {
+      dispatch({ type: GET_VIDEOGAMES, payload: data });
+    });
+  };
 }
 
 export function getDetailVideoGame(id) {
-    return function (dispatch) {
-        return axios
-            .get(`/videogame/${id}`)
-            .then(({ data }) => {
-                dispatch({ type: GET_DETAIL_VIDEOGAME, payload: data });
-            });
-    };
+  return function (dispatch) {
+    return axios.get(`/videogame/${id}`).then(({ data }) => {
+      dispatch({ type: GET_DETAIL_VIDEOGAME, payload: data });
+    });
+  };
 }
 
 export function emptyDetailVideoGame() {
-    return function (dispatch) {
-        dispatch({ type: EMPTY_DETAIL_VIDEOGAME });
-    };
+  return function (dispatch) {
+    dispatch({ type: EMPTY_DETAIL_VIDEOGAME });
+  };
 }
 
 export function getGenres() {
-    return function (dispatch) {
-        return axios.get(`/genres`).then(({ data }) => {
-            dispatch({ type: GET_GENRES, payload: data });
-        });
-    };
+  return function (dispatch) {
+    return axios.get(`/genres`).then(({ data }) => {
+      dispatch({ type: GET_GENRES, payload: data });
+    });
+  };
 }
 
 export function orderVideoGames(order) {
-    return function (dispatch) {
-        dispatch({ type: ORDER_VIDEOGAMES, payload: order });
-    };
+  return function (dispatch) {
+    dispatch({ type: ORDER_VIDEOGAMES, payload: order });
+  };
 }
 
 export function filterVideoGames(filter) {
-    return function (dispatch) {
-        dispatch({ type: FILTER_VIDEOGAMES, payload: filter });
-    };
+  return function (dispatch) {
+    dispatch({ type: FILTER_VIDEOGAMES, payload: filter });
+  };
 }
 
 export function searchVideoGames(name) {
-    return function (dispatch) {
-        return axios
-            .get(`/videogames?name=${name}`)
-            .then(({ data }) => {
-                dispatch({ type: SEARCH_VIDEOGAMES, payload: data });
-            });
-    };
+  return function (dispatch) {
+    return axios.get(`/videogames?name=${name}`).then(({ data }) => {
+      dispatch({ type: SEARCH_VIDEOGAMES, payload: data });
+    });
+  };
 }
 
 export function emptyFilteredVideoGames() {
-    return function (dispatch) {
-        dispatch({ type: EMPTY_FILTERED_VIDEOGAMES });
-    };
+  return function (dispatch) {
+    dispatch({ type: EMPTY_FILTERED_VIDEOGAMES });
+  };
 }
 
 export function createVideogame(obj) {
-    return (dispatch) =>
-        fetch(`${baseURL}/videogames`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(obj),
-        })
-            .then((resp) => resp.json())
-            .then((json) => {
-                dispatch({ type: CREATE_VIDEOGAME, payload: json });
-            });
+  return (dispatch) =>
+    fetch(`${baseURL}/videogames`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((resp) => resp.json())
+      .then((json) => {
+        dispatch({ type: CREATE_VIDEOGAME, payload: json });
+      });
 }
 
 export function changePage(page) {
-    return function (dispatch) {
-        dispatch({ type: CHANGE_PAGE, payload: page });
-    };
+  return function (dispatch) {
+    dispatch({ type: CHANGE_PAGE, payload: page });
+  };
 }
 
 export function origenFilterVideoGames(origen) {
-    return function (dispatch) {
-        dispatch(emptyFilteredVideoGames());
-        dispatch({ type: ORIGEN_FILTER_VIDEOGAMES, payload: origen });
-    };
+  return function (dispatch) {
+    dispatch(emptyFilteredVideoGames());
+    dispatch({ type: ORIGEN_FILTER_VIDEOGAMES, payload: origen });
+  };
 }
 
 export function deleteVideoGame(id) {
-    return function (dispatch) {
-        return axios
-            .delete(`/videogame/${id}`)
-            .then(({ data }) => {
-                dispatch({ type: DELETE_VIDEOGAME, payload: data });
-            });
-    };
+  return function (dispatch) {
+    return axios.delete(`/videogame/${id}`).then(({ data }) => {
+      dispatch({ type: DELETE_VIDEOGAME, payload: data });
+    });
+  };
 }
 
 export function filterPlataform(plataforma) {
-    return function (dispatch) {
-        dispatch({ type: FILTER_PLATAFORM, payload: plataforma });
-    };
+  return function (dispatch) {
+    dispatch({ type: FILTER_PLATAFORM, payload: plataforma });
+  };
 }

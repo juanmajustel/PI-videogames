@@ -21,8 +21,6 @@ exports.getVideogames = async (req, res) => {
         include: [Genre],
       });
 
-      console.log(gamesDB);
-
       // si hay videojuegos en la base de datos que coinciden con el nombre de búsqueda, los agrega al array 'gamesDBFull'
       if (gamesDB.length > 0) {
         gamesDBFull = gamesDB.map((g) => ({
@@ -80,7 +78,7 @@ exports.getVideogames = async (req, res) => {
       );
       // se actualiza la URL para obtener la siguiente página de resultados
       nextUrl = data.next;
-      // se actualiza la URL para obtener la siguiente página de resultados
+
       const videoGame = data.results.map((game) => {
         return {
           id: game.id,
